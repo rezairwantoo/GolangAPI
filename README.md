@@ -14,6 +14,7 @@ How to Setup
     }
   
 **Note: If doesn't have a postgres please install postgres DB on your local computer**
+- run make build-migrate
 -  run make postgres-migrate-up
 **Note: if the migration not working properly run manual script on resources to create tables**
 
