@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "6a1bf529-9028-4425-9905-c57acd49377b",
+		"name": "API Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Products",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "AVZekqU0u9aBMgPwIMEjO8t74rGwQNoG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Securities-Request-PartnerID",
+						"value": "ZPJD4ZDWCU",
+						"type": "default"
+					},
+					{
+						"key": "X-Securities-Signature",
+						"value": "7e56adbd3e64a535c1cb9a94f108b9b65a9f2ce009dbf020ce94617a8c9370ae",
+						"type": "default"
+					},
+					{
+						"key": "X-Securities-Timestamp",
+						"value": "1639672793569",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "x-api-key",
+						"value": "cmV6YWE0NjNzaTpncmtNbWp4YjJKNm5laHY3",
+						"type": "default"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"item\" : \"Sosro\",\n    \"price\": 5000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1323/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1323",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1323/products/MQ==",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1323",
+					"path": [
+						"products",
+						"MQ=="
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1323/products?limit=1&page=1&search=aQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1323",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "search",
+							"value": "aQ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Products",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"item\" : \"Aqua\",\n    \"price\": 2000,\n    \"is_active\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1323/product/MQ==",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1323",
+					"path": [
+						"product",
+						"MQ=="
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Products",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1323/product/MQ==",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1323",
+					"path": [
+						"product",
+						"MQ=="
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

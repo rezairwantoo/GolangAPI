@@ -1,0 +1,14 @@
+{
+    "app-env": "local",
+    "app-port": 3000,
+    "db-postgres": {
+        "username":"username",
+        "password":"password",
+        "host":"127.0.0.1",
+        "port":5432,
+        "database":"dbname",
+        "max_open_conns": 0,
+        "max_idle_conns": 10,
+        "conn_max_lifetime": 0
+    }
+}
